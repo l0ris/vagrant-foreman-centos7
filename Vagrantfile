@@ -6,7 +6,7 @@ Vagrant.configure(2) do |config|
 
   config.vm.define :puppet do |puppet|
     config.vm.hostname = "puppet.sysops.lab"
-    puppet.vm.box = 'puppetlabs/centos-6.6-64-nocm'
+    puppet.vm.box = 'puppetlabs/centos-7.0-64-nocm'
     puppet.vm.network :private_network, ip:'192.168.11.10'
     config.vm.provision "shell", path: "foreman.sh"
     config.vm.provider :virtualbox do |vb, override|
